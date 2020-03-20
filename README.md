@@ -27,7 +27,7 @@ Things you may want to cover:
 | Column | Type   | Option      |
 | ------ | ------ | ----------- |
 | name   | string | null: false |
-| email  | string | null: false, unique: true,add_index |
+| email  | string | null: false, unique: true, index: true |
 
 ## Association
 - has_many :groups, through: :groups_users, source: :groups
