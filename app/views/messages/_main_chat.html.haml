@@ -1,0 +1,53 @@
+.chat-main
+  .group-info
+    .group-name
+      test
+      .member
+        メンバーはいません
+    .edit-btn
+      = link_to "#" do
+        Edit
+  .message-list
+    .message-box
+      .message-info
+        .user-name
+          Nama
+        .date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .user-name
+          Nama
+        .date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .user-name
+          Nama
+        .date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .user-name
+          Nama
+        .date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+  .message-footer
+    .form
+      %form
+        %input{type: "text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image', class: 'image')
+          %input{type: "file", class: "input-file"}
+    .send-btn
+      =link_to "#" do
+        send

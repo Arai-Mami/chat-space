@@ -1,0 +1,7 @@
+@import "reset";
+// _reset.scssを読み込み
+@import "modules/messages";
+//moduleフォルダ内に作成した_messages.scssファイルを読み込み
+@import "font-awesome-sprockets";
+@import "font-awesome";
+//FontAwasomeのgemをインストール後、上記を記述
