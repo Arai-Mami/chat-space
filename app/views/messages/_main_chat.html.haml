@@ -1,53 +1,53 @@
 .chat-main
-  .group-info
-    .group-name
+  .chat-main__group-info
+    .chat-main__group-info__group-name
       test
-      .member
+      .chat-main__group-info__group-name__member
         メンバーはいません
-    .edit-btn
+    .chat-main__group-info__edit-btn
       = link_to "#" do
         Edit
-  .message-list
-    .message-box
-      .message-info
-        .user-name
+  .chat-main__message-list
+    .chat-main__message-list__message-box
+      .chat-main__message-list__message-box__message-info
+        .chat-main__message-list__message-box__message-info__user-name
           Nama
-        .date
+        .chat-main__message-list__message-box__message-info__date
           date
-      .message-text
+      .chat-main__message-list__message-box__message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-    .message-box
-      .message-info
-        .user-name
+    .chat-main__message-list__message-box
+      .chat-main__message-list__message-box__message-info
+        .chat-main__message-list__message-box__message-info__user-name
           Nama
-        .date
+        .chat-main__message-list__message-box__message-info__date
           date
-      .message-text
+      .chat-main__message-list__message-box__message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-    .message-box
-      .message-info
-        .user-name
+    .chat-main__message-list__message-box
+      .chat-main__message-list__message-box__message-info
+        .chat-main__message-list__message-box__message-info__user-name
           Nama
-        .date
+        .chat-main__message-list__message-box__message-info__date
           date
-      .message-text
+      .chat-main__message-list__message-box__message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-    .message-box
-      .message-info
-        .user-name
+    .chat-main__message-list__message-box
+      .chat-main__message-list__message-box__message-info
+        .chat-main__message-list__message-box__message-info__user-name
           Nama
-        .date
+        .chat-main__message-list__message-box__message-info__date
           date
-      .message-text
+      .chat-main__message-list__message-box__message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
 
-  .message-footer
-    .form
+  .chat-main__message-footer
+    .chat-main__message-footer__form
       %form
         %input{type: "text", placeholder: "type a message"}
         %label{class: "input-box__image"}
           = icon('far', 'image', class: 'image')
           %input{type: "file", class: "input-file"}
-    .send-btn
+    .chat-main__message-footer__send-btn
       =link_to "#" do
         send

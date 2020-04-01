@@ -22,22 +22,22 @@
 }
 //まずside_barのSCSS
 .side-bar {
-  .user-name{
+  &__user-name{
     @include display-center;
     background-color: #253141;
     height: 100px;
     width: 300px;
-    .top-items{
+    &__top-items{
       background-color: #253141;
       height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
-      .name{
+      &__name{
         font-size: 16px;
         color: #ffffff;
       }
-      .icons{
+      &__icons{
         color: #ffffff;
         background-color: #253141;
         width: 60px;
@@ -47,12 +47,12 @@
       }
     }
   }
-  .group-list{
+  &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     width: 300px;
-    .group-box{
-      .group-name{
+    &__group-box{
+      &__group-name{
         background-color:#2f3e51;
         height: 40px;
         width: 260px;
@@ -61,7 +61,7 @@
         font-size: 15px;
         color: #ffffff;
       }
-      .group-last-message{
+      &__group-last-message{
         background-color: #2f3e51;
         height: 50px;
         width: 260px;
@@ -73,34 +73,34 @@
   }
 }
   // 以下アイコンの設定
-  .edit{
-   color: #ffffff;
-   margin: 0 5px 0 0;
+.edit{
+    color: #ffffff;
+    margin: 0 5px 0 0;
   }
 
-  .cog{
-   color: #ffffff;
+.cog{
+    color: #ffffff;
   }
 
 //ここからchat_mainのSCSS
 .chat-main {
-  .group-info {
+  &__group-info {
     background-color: #ffffff;
     height: 100px;
     width: calc(100vw - 300px);
     display: flex;
     justify-content: space-between;
-    .group-name {
+    &__group-name {
       background-color: #ffffff;
       height: 20px;
       margin: 35px 0 15px 40px;
-      .member {
+      &__member {
         margin: 15px 0 0 0;
         color: #999999;
         font-size: 12px;
       }
     }
-    .edit-btn {
+    &__edit-btn {
       @include display-center;
       background-color: #ffffff;
       height: 40px;
@@ -117,37 +117,37 @@
       }
     }
   }
-  .message-list {
+  &__message-list {
     background-color: #eeeeee;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     overflow-x: scroll;
-    .message-box {
+    &__message-box {
       background-color: #eeeeee;
       padding: 35px 40px 46px 40px;
-      .message-info {
+      &__message-info {
         background-color: #eeeeee;
         display: flex;
         font-size: 16px;
         color: #333333;
-        .date {
+        &__date {
           font-size: 14px;
           color: #999999;
           padding: 0 0 0 10px;
         }
       }
-      .message-text{
+      &__message-text{
         padding: 12px 0 0 0;
         color: #434A54;
       }
     }
   }
-  .message-footer {
+  &__message-footer {
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
     @include display-between;
-    .form {
+    &__form {
       position: relative;
       @include display-between;
       background-color: #ffffff;
@@ -155,7 +155,7 @@
       width: 85%;
       margin: 20px 0 20px 40px;
     }
-    .send-btn {
+    &__send-btn {
       background-color: #00BFFF;
       width: 100px;
       height: 50px;
