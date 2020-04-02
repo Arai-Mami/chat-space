@@ -2,52 +2,52 @@
   .group-info
     .group-name
       test
-      .member
+      .group-name__member
         メンバーはいません
-    .edit-btn
+    .group-info__edit-btn
       = link_to "#" do
         Edit
   .message-list
     .message-box
       .message-info
-        .user-name
+        .message-info__user-name
           Nama
-        .date
+        .message-info__date
           date
       .message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
     .message-box
       .message-info
-        .user-name
+        .message-info__user-name
           Nama
-        .date
+        .message-info__date
           date
       .message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
     .message-box
       .message-info
-        .user-name
+        .message-info__user-name
           Nama
-        .date
+        .message-info__date
           date
       .message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
     .message-box
       .message-info
-        .user-name
+        .message-info__user-name
           Nama
-        .date
+        .message-info__date
           date
       .message-text
         あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
 
   .message-footer
-    .form
+    .message-footer__form
       %form
-        %input{type: "text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('far', 'image', class: 'image')
-          %input{type: "file", class: "input-file"}
-    .send-btn
+        %input{type: "text", class: "input_box", placeholder: "type a message"}
+          %label{class: "input-box__image"}
+            = icon('far', 'image', class: 'image')
+            %input{type: "file", class: "input-file"}
+    .message-footer__send-btn
       =link_to "#" do
         send

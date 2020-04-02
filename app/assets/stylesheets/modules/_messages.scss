@@ -33,11 +33,11 @@
       width: 260px;
       display: flex;
       justify-content: space-between;
-      .name{
+      &__name{
         font-size: 16px;
         color: #ffffff;
       }
-      .icons{
+      &__icons{
         color: #ffffff;
         background-color: #253141;
         width: 60px;
@@ -73,13 +73,13 @@
   }
 }
   // 以下アイコンの設定
-  .edit{
-   color: #ffffff;
-   margin: 0 5px 0 0;
+.edit{
+    color: #ffffff;
+    margin: 0 5px 0 0;
   }
 
-  .cog{
-   color: #ffffff;
+.cog{
+    color: #ffffff;
   }
 
 //ここからchat_mainのSCSS
@@ -94,13 +94,13 @@
       background-color: #ffffff;
       height: 20px;
       margin: 35px 0 15px 40px;
-      .member {
+      &__member {
         margin: 15px 0 0 0;
         color: #999999;
         font-size: 12px;
       }
     }
-    .edit-btn {
+    &__edit-btn {
       @include display-center;
       background-color: #ffffff;
       height: 40px;
@@ -130,7 +130,7 @@
         display: flex;
         font-size: 16px;
         color: #333333;
-        .date {
+        &__date {
           font-size: 14px;
           color: #999999;
           padding: 0 0 0 10px;
@@ -147,7 +147,7 @@
     height: 90px;
     width: calc(100vw - 300px);
     @include display-between;
-    .form {
+    &__form {
       position: relative;
       @include display-between;
       background-color: #ffffff;
@@ -155,7 +155,7 @@
       width: 85%;
       margin: 20px 0 20px 40px;
     }
-    .send-btn {
+    &__send-btn {
       background-color: #00BFFF;
       width: 100px;
       height: 50px;
@@ -173,22 +173,37 @@
 form {
   flex-basis: 95%;
 }
+//上記、インライン要素のサイズ割合を修正
+
 //入力フォームの設定
-input{
-  width: 100%;
+.input_box{
+  width: 98%;
   height: 50px;
   flex-basis: 50%;
   border: none;
+  margin: 0 0 0 10px;
 }
 
-input.input-file {
+.input-file {
   display: none;
 }
 
-//imageアイコンの設定
-label.input-box__image {
+//imageアイコンの外枠(block)を設定
+.input-box__image {
   position: absolute;
-  width: 5px;
-  line-height: 50px;
+  width: 20px;
+  height: 50px;
   color: black;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin: 10px 0px 0px 0px;
+}
+
+//imageアイコンの設定
+.fa-image:before {
+  height: 50px;
+  font-size: 25px;
+  margin: 10px 0px 0 10px;
 }
