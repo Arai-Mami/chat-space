@@ -22,12 +22,12 @@
 }
 //まずside_barのSCSS
 .side-bar {
-  .user-name{
+  &__user-name{
     @include display-center;
     background-color: #253141;
     height: 100px;
     width: 300px;
-    .top-items{
+    &__top-items{
       background-color: #253141;
       height: 20px;
       width: 260px;
@@ -47,12 +47,12 @@
       }
     }
   }
-  .group-list{
+  &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     width: 300px;
-    .group-box{
-      .group-name{
+    &__group-box{
+      &__group-name{
         background-color:#2f3e51;
         height: 40px;
         width: 260px;
@@ -61,7 +61,7 @@
         font-size: 15px;
         color: #ffffff;
       }
-      .group-last-message{
+      &__group-last-message{
         background-color: #2f3e51;
         height: 50px;
         width: 260px;
@@ -84,13 +84,13 @@
 
 //ここからchat_mainのSCSS
 .chat-main {
-  .group-info {
+  &__group-info {
     background-color: #ffffff;
     height: 100px;
     width: calc(100vw - 300px);
     display: flex;
     justify-content: space-between;
-    .group-name {
+    &__group-name {
       background-color: #ffffff;
       height: 20px;
       margin: 35px 0 15px 40px;
@@ -117,15 +117,15 @@
       }
     }
   }
-  .message-list {
+  &__message-list {
     background-color: #eeeeee;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     overflow-x: scroll;
-    .message-box {
+    &__message-box {
       background-color: #eeeeee;
       padding: 35px 40px 46px 40px;
-      .message-info {
+      &__message-info {
         background-color: #eeeeee;
         display: flex;
         font-size: 16px;
@@ -136,13 +136,13 @@
           padding: 0 0 0 10px;
         }
       }
-      .message-text{
+      &__message-text{
         padding: 12px 0 0 0;
         color: #434A54;
       }
     }
   }
-  .message-footer {
+  &__message-footer {
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
