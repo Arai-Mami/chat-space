@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+//paddingなどの設定を行った際に、その要素のサイズ全体が大きくなってしまうことを防ぐ
+//*の記述はすべての要素に適用させるという意味
+
+.wrapper {
+  display: flex;
+}
+//index.html.hamlで読み込んだ２つのファイルside_bar・main_chatを横並びにしている
+
+@mixin display-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//まずside_barのSCSS
+.side-bar {
+  .user-name{
+    @include display-center;
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+    .top-items{
+      background-color: #253141;
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        font-size: 16px;
+        color: #ffffff;
+      }
+      &__icons{
+        color: #ffffff;
+        background-color: #253141;
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+  .group-list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    width: 300px;
+    .group-box{
+      .group-name{
+      background-color:#2f3e51;
+      height: 40px;
+      width: 260px;
+      padding: 20px 0 5px 0;
+      margin:  0 auto;
+      font-size: 15px;
+      color: #ffffff;
+      }
+      .group-last-message{
+        background-color: #2f3e51;
+        height: 50px;
+        width: 260px;
+        margin:  0 auto;
+        font-size: 11px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+  // 以下アイコンの設定
+.edit{
+    color: #ffffff;
+    margin: 0 5px 0 0;
+  }
+
+.cog{
+    color: #ffffff;
+  }
+
+//ここからchat_mainのSCSS
+.chat-main {
+  .group-info {
+    background-color: #ffffff;
+    height: 100px;
+    width: calc(100vw - 300px);
+    display: flex;
+    justify-content: space-between;
+    .group-name {
+      background-color: #ffffff;
+      height: 20px;
+      margin: 35px 0 15px 40px;
+      &__member {
+        margin: 15px 0 0 0;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__edit-btn {
+      @include display-center;
+      background-color: #ffffff;
+      height: 40px;
+      width: 72px;
+      font-size: 16px;
+      color: #38aef0;
+      border-color: #38aef0;
+      border-style: solid;
+      border-width: 1px;
+      margin: 28px 40px 28px 0;
+      & a{
+        color: #38aef0;
+        text-decoration: none;
+      }
+    }
+  }
+  .message-list {
+    background-color: #eeeeee;
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    overflow-x: scroll;
+    .message-box {
+      background-color: #eeeeee;
+      padding: 35px 40px 46px 40px;
+      .message-info {
+        background-color: #eeeeee;
+        display: flex;
+        font-size: 16px;
+        color: #333333;
+        &__date {
+          font-size: 14px;
+          color: #999999;
+          padding: 0 0 0 10px;
+        }
+      }
+      .message-text{
+        padding: 12px 0 0 0;
+        color: #434A54;
+      }
+    }
+  }
+  .message-footer {
+    background-color: #d2d2d2;
+    height: 90px;
+    width: calc(100vw - 300px);
+    @include display-between;
+    &__form {
+      position: relative;
+      @include display-between;
+      background-color: #ffffff;
+      height: 50px;
+      width: 85%;
+      margin: 20px 0 20px 40px;
+    }
+    &__send-btn {
+      background-color: #00BFFF;
+      width: 100px;
+      height: 50px;
+      margin: 0 40px 0 15px;
+      text-align: center;
+      line-height: 50px;
+      & a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+form {
+  flex-basis: 95%;
+}
+//上記、インライン要素のサイズ割合を修正
+
+//入力フォームの設定
+.input_box{
+  width: 98%;
+  height: 50px;
+  flex-basis: 50%;
+  border: none;
+  margin: 0 0 0 10px;
+}
+
+.input-file {
+  display: none;
+}
+
+//imageアイコンの外枠(block)を設定
+.input-box__image {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  color: black;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin: 10px 0px 0px 0px;
+}
+
+//imageアイコンの設定
+.fa-image:before {
+  height: 50px;
+  font-size: 25px;
+  margin: 10px 0px 0 10px;
+}

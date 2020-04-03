@@ -1,0 +1,53 @@
+.chat-main
+  .group-info
+    .group-name
+      test
+      .group-name__member
+        メンバーはいません
+    .group-info__edit-btn
+      = link_to "#" do
+        Edit
+  .message-list
+    .message-box
+      .message-info
+        .message-info__user-name
+          Nama
+        .message-info__date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .message-info__user-name
+          Nama
+        .message-info__date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .message-info__user-name
+          Nama
+        .message-info__date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    .message-box
+      .message-info
+        .message-info__user-name
+          Nama
+        .message-info__date
+          date
+      .message-text
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+  .message-footer
+    .message-footer__form
+      %form
+        %input{type: "text", class: "input_box", placeholder: "type a message"}
+          %label{class: "input-box__image"}
+            = icon('far', 'image', class: 'image')
+            %input{type: "file", class: "input-file"}
+    .message-footer__send-btn
+      =link_to "#" do
+        send
