@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
-  protect_form_forgey with: :exception
+  protect_from_forgery with: :exception
   #CSRF対策
   before_action :authenticate_user!
+  #すべてのアクションが実行される前に、ログインしていない場合は、ログイン画面に背にするようになる
   before_action :configure_permitted_parameters, if: :devise_controller?
+  #deviseコントローラーが動いたとき、
 
   protected
 
