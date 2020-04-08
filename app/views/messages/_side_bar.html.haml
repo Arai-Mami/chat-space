@@ -2,7 +2,7 @@
   .user-name
     .top-items
       .top-items__name
-        = current_user.name
+        = current_user.name 
       .top-items__icons
         = link_to new_group_path(@group) do
           = icon('far', 'edit', class: 'edit')
