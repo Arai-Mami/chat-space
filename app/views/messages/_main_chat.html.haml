@@ -1,21 +1,23 @@
 .chat-main
   .group-info
     .group-name
-      test
+      = @group.group_name
       .group-name__member
-        メンバーはいません
+        - @group.users.each do |user|
+          =user.name
     .group-info__edit-btn
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
   .message-list
-    .message-box
-      .message-info
-        .message-info__user-name
-          Nama
-        .message-info__date
-          date
-      .message-text
-        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    - @messages.each do |message|
+      .message-box
+        .message-info
+          .message-info__user-name
+            = message.user.name
+          .message-info__date
+            = message.created_at
+        .message-text
+          = message.message
     .message-box
       .message-info
         .message-info__user-name
