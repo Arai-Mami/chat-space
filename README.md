@@ -59,7 +59,7 @@ Things you may want to cover:
 ## messagesテーブル
 | Column   | Type       | Option                         |
 | -------- | ---------- | ------------------------------ |
-| body     | text       |                                |
+| message     | text       |                                |
 | image    | string     |                                |
 | group_id | references | null: false, foreign_key: true, index :true |
 | user_id  | references | null: false, foreign_key: true, index :true |
