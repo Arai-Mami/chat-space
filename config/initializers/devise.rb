@@ -8,7 +8,6 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-add_Haml
   # config.secret_key = '864fd5c68facd14cf3425ae83560060775570939f0a09100a6dc697be5f6cdbd71418b458687826a21bc4a4fe325992c0e18c839a56e3ee91fb721bf5e72ad3d'
 
   # ==> Controller configuration
