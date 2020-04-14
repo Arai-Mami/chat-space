@@ -9,39 +9,7 @@
       = link_to edit_group_path(@group) do
         Edit
   .message-list
-    - @messages.each do |message|
-      .message-box
-        .message-info
-          .message-info__user-name
-            = message.user.name
-          .message-info__date
-            = message.created_at
-        .message-text
-          = message.message
-    .message-box
-      .message-info
-        .message-info__user-name
-          Nama
-        .message-info__date
-          date
-      .message-text
-        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-    .message-box
-      .message-info
-        .message-info__user-name
-          Nama
-        .message-info__date
-          date
-      .message-text
-        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-    .message-box
-      .message-info
-        .message-info__user-name
-          Nama
-        .message-info__date
-          date
-      .message-text
-        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+    = render @messages
 
   .message-footer
     = form_with model: [@group, @message], html: {class:"Form"}, local: true do |f|
