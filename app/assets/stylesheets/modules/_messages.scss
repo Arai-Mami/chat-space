@@ -154,24 +154,13 @@
       height: 50px;
       width: 85%;
       margin: 20px 0 20px 40px;
-    }
-    &__send-btn {
-      background-color: #00BFFF;
-      width: 100px;
-      height: 50px;
-      margin: 0 40px 0 15px;
-      text-align: center;
-      line-height: 50px;
-      & a{
-        text-decoration: none;
-        color: white;
-      }
+    
     }
   }
 }
 
 form {
-  flex-basis: 95%;
+  flex-basis: 100%;
 }
 //上記、インライン要素のサイズ割合を修正
 
@@ -182,6 +171,22 @@ form {
   flex-basis: 50%;
   border: none;
   margin: 0 0 0 10px;
+  position: absolute;
+}
+
+.send-btn {
+  position: absolute;
+  background-color: #00BFFF;
+  width: 100px;
+  height: 50px;
+  left: 100%;
+  margin: 0 0px 0 15px;
+  text-align: center;
+  line-height: 50px;
+  & a{
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .input-file {
@@ -193,6 +198,7 @@ form {
   position: absolute;
   width: 20px;
   height: 50px;
+  left:  95%;
   color: black;
   display: inline-block;
   font-style: normal;
