@@ -15,4 +15,7 @@
           .group-name
             = group.group_name
           .group-last-message
-            まだメッセージはありません
+            - if group.messages.present?
+              = group.messages.last
+            - else
+              まだメッセージはありません
