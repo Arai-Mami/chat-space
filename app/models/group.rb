@@ -5,9 +5,9 @@ class Group < ActiveRecord::Base
   validates :group_name, presence: true, uniqueness: true
 
   def show_last_message
-    if(last_message.last).present?
-      if last_message.content?
-        last_message.content
+    if(last_message= self.messages.last).present?
+      if last_message.message?
+        last_message.message
       else
         '画像が投稿されています'
       end

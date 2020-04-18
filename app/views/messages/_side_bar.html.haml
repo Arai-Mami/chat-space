@@ -15,7 +15,9 @@
           .group-name
             = group.group_name
           .group-last-message
-            - if group.messages.present?
-              = group.messages.last
-            - else
-              まだメッセージはありません
+            = group.show_last_message
+            -# - if group.messages.present?
+            -#   = group.messages.last.message
+            -# - else
+            -#   まだメッセージはありません
+            -# 上記でも記述はできるが、モデルでメソッドを別途定義してスッキリする
