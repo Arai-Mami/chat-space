@@ -63,6 +63,11 @@ $(function(){
       $('Form')[0].reset();
       submit=$('.send-btn').prop('disabled', false);
       console.log(submit)
-    })
+      .fail(function(){
+        alert("メッセージ送信に失敗しました");
+        // 送信に失敗したときの記述がココで良いのかわからない
+        // とりあえず動いたのでこのまま進む
+      });
+    });
   });
 });
