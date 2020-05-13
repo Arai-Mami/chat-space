@@ -23,9 +23,7 @@ $(function(){
     e.preventDefault()
     // デフォルトのフォーム送信というアクションはされなくなっている
     let formData = new FormData(this);
-    console.log(formData)
     let url = $(this).attr('action');
-    console.log(url)
     // $(this)はonメソッドの中で使うと、onメソッドを利用しているノードのオブジェクトが参照される
     // つまり今回はform要素自体
     $.ajax({
@@ -37,15 +35,12 @@ $(function(){
       contentType: false,
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
-      console.log(html)
       $('.message-list').append(html)
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
       //#下までスクロール
       $('.Form')[0].reset();
       submit=$('.send-btn').prop('disabled', false);
-      console.log(submit)
       .fail(function(){
         alert("メッセージ送信に失敗しました");
         // 送信に失敗したときの記述がココで良いのかわからない
