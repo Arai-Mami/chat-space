@@ -11,14 +11,13 @@ $(function(){
               <div class="message-text">
               ${message.message}
               </div>
-               ${message.image ? 
-                `<img class="message__image" src="${message.image}">`:``}
+               if ${message.image ? `<img class="message__image" src="${message.image}">`:``}
           </div>
         </div>
       </div>`
-      return html;ざｎ
+      return html;
     };
-  }
+  };
   $('.Form').on('submit', function(e){
     // Formに関しては検証ツールを確認するとわかる！submitというイベントに発火している
     e.preventDefault()
@@ -44,7 +43,7 @@ $(function(){
       $('.message-list').append(html)
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
       //#下までスクロール
-      $('Form')[0].reset();
+      $('.Form')[0].reset();
       submit=$('.send-btn').prop('disabled', false);
       console.log(submit)
       .fail(function(){
