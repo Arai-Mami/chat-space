@@ -11,28 +11,12 @@ $(function(){
               <div class="message-text">
               ${message.message}
               </div>
-              <img class="message__image" src="${message.image}">
-            </div>
+               ${message.image ? 
+                `<img class="message__image" src="${message.image}">`:``}
           </div>
         </div>
       </div>`
-      return html;
-    }else {
-      let html =
-      `<div class="message-box">
-        <div class="message-info">
-          <div class="message-info__user-name">
-            ${message.user_name}
-            <div class="message-info__date">
-              ${message.created_at}
-              <div class="message-text">
-              ${message.message}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>`
-      return html;
+      return html;ざｎ
     };
   }
   $('.Form').on('submit', function(e){
