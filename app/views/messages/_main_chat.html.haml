@@ -12,7 +12,7 @@
     = render @messages
 
   .message-footer
-    = form_with model: [@group, @message], html: {class:"Form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class:"Form"}, remote: true do |f|
       .message-footer__form
         =f.text_field :message, class: "input_box", placeholder: "type a message"
         = f.label :image, class: "input-box__image" do
