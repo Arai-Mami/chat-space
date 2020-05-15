@@ -6,32 +6,16 @@ $(function(){
         <div class="message-info">
           <div class="message-info__user-name">
             ${message.user_name}
-            <div class="message-info_date">
+            <div class="message-info__date">
               ${message.created_at}
               <div class="message-text">
                 ${message.message}
               </div>
-              <img class="message__image" src="${message.image_url}">
+              ${message.image_url? `<img class="message__image" src="${message.image_url}">`:``}
             </div>
           </div>
         </div>
       </div>`
-    return html;
-  } else {
-    let html =
-    `<div class="message-box">
-      <div class="message-info">
-        <div class="message-info__user-name">
-          ${message.user_name}
-          <div class="message-info_date">
-            ${message.created_at}
-            <div class="message-text">
-              ${message.message}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>`
     return html;
   };
 }
