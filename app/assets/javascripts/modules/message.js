@@ -1,8 +1,7 @@
 $(function(){
   function buildHTML(message){
-  if ( message.image_url ) {
     let html =
-      `<div class="message-box">
+      `<div class="message-box" data-message-id=${message.id}>
         <div class="message-info">
           <div class="message-info__user-name">
             ${message.user_name}
@@ -18,10 +17,9 @@ $(function(){
       </div>`
     return html;
   };
-}
   $('.Form').on('submit', function(e){
+    console.log(e)
     e.preventDefault();
-    console.log(this);
     let formData = new FormData(this);
     let url = $(this).attr('action');
     $.ajax({
@@ -34,11 +32,14 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      console.log(html)
       $('.message-list').append(html);
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
       $('.Form')[0].reset();
+      $(".Form__submit").prop("disabled",false);
     })
-    $(".Form__submit").prop("disable",false);
+    .fail(function(){
+      alert("メッセージ送信に失敗しました");
+      $('.Form__submit').prop("disabled", false);
+    });
   });
 });
