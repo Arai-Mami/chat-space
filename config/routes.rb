@@ -12,4 +12,7 @@ Rails.application.routes.draw do
     end
   end
   #トップページのアクセスでchatのメイン部分は表示せず、side_barのみ表示するようにする
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 end
